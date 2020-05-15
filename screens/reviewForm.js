@@ -4,6 +4,8 @@ import { globalStyles } from '../styles/global.js';
 import { Formik } from 'formik';
 import * as yup from 'yup';
 
+import FlatButton from '../shared/button';
+
 const reviewSchema = yup.object({
   title: yup.string().required().min(4),
   body: yup.string().required().min(8),
@@ -41,6 +43,7 @@ export default function ReviewForm({ addReview }) {
               {props.touched.title && props.errors.title}
             </Text>
             <TextInput
+              minHeight={80}
               multiline
               style={globalStyles.input}
               placeholder="Review Body"
@@ -62,11 +65,7 @@ export default function ReviewForm({ addReview }) {
             <Text style={globalStyles.errorText}>
               {props.touched.rating && props.errors.rating}
             </Text>
-            <Button
-              title="submit"
-              color="maroon"
-              onPress={props.handleSubmit}
-            />
+            <FlatButton text="submit" onPress={props.handleSubmit} />
           </View>
         )}
       </Formik>
