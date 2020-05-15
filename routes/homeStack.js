@@ -12,7 +12,7 @@ const homeNavigator = ({ navigation, title }) => {
       initialRouteName="Home"
       screenOptions={{
         headerStyle: {
-          backgroundColor: 'gray',
+          backgroundColor: 'skyblue',
         },
         height: 60,
         headerTintColor: '#444',
@@ -26,7 +26,9 @@ const homeNavigator = ({ navigation, title }) => {
         name="Home"
         component={Home}
         options={{
-          headerTitle: () => <Header navigation={navigation} title="GameZone" />,
+          headerTitle: () => (
+            <Header navigation={navigation} title="GameZone" />
+          ),
         }}
       />
       <Stack.Screen

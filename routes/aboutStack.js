@@ -11,7 +11,7 @@ export default function aboutNavigator({ navigation, title }) {
       initialRouteName="About"
       screenOptions={{
         headerStyle: {
-          backgroundColor: '#999',
+          backgroundColor: 'skyblue',
         },
         headerTintColor: '#444',
         headerTitleAlign: 'center',
